@@ -1,2 +1,2 @@
 service:
-  description: "Тестовый сервис для управления пользователями"
+  description: "${USER_SERVICE_TEST_DESCRIPTION}"
