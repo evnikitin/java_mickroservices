@@ -1,4 +1,4 @@
 server:
   port: 8081
 service:
-  description: "Сервис для управления пользователями (sss)"
+  description: "Сервис для управления пользователями"
