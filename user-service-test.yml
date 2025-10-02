@@ -1,4 +1,4 @@
 server:
   port: 8081
 service:
-  description: "${USER_SERVICE_TEST_DESCRIPTION:Тестовое описания"
+  description: "${USER_SERVICE_TEST_DESCRIPTION:Тестовое описания}"
