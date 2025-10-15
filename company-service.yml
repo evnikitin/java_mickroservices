@@ -3,9 +3,9 @@ server:
 
 spring:
   datasource:
-    url: jdbc:postgresql://postgres:5432/main_db
-    username: admin
-    password: admin
+    url: jdbc:postgresql://postgres:5432/mickroservices_db
+    username: postgres
+    password: cfnhfg
     schema: company_schema
 
 service:
