@@ -1,4 +1,12 @@
 server:
   port: 8081
+
+spring:
+  datasource:
+    url: jdbc:postgresql://postgres:5432/mickroservices_db
+    username: postgres
+    password: cfnhfg
+    schema: user_schema
+
 service:
-  description: "Сервис для управления пользователями изменен"
+  description: "Сервис для управления пользователями"
