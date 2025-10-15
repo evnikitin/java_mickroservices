@@ -1,4 +1,12 @@
 server:
   port: 8082
+
+spring:
+  datasource:
+    url: jdbc:postgresql://postgres:5432/main_db
+    username: admin
+    password: admin
+    schema: company_schema
+
 service:
   description: "Сервис для управления компаниями"
