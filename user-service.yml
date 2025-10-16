@@ -7,6 +7,13 @@ spring:
     username: postgres
     password: cfnhfg
     schema: user_schema
+    driver-class-name: org.postgresql.Driver
+
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+    schemas: user_schema
+    baseline-on-migrate: true
 
 service:
   description: "Сервис для управления пользователями"
