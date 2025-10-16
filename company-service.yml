@@ -14,6 +14,7 @@ spring:
     locations: classpath:db/migration
     schemas: company_schema
     baseline-on-migrate: true
+    create-schemas: true
 
 service:
   description: "Сервис для управления компаниями"
