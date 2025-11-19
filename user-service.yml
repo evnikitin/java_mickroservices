@@ -2,9 +2,6 @@ server:
   port: 8081
 
 spring:
-  application:
-    name: user-service
-
   # Настройки базы данных (оставил без изменений)
   datasource:
     url: jdbc:postgresql://postgres:5432/mickroservices_db
