@@ -41,11 +41,6 @@ spring:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
 
-eureka:
-  client:
-    service-url:
-      defaultZone: http://discovery-server:8761/eureka/
-
 kafka:
   topic:
     company-deleted: company.deleted
