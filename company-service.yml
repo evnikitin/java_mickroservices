@@ -2,12 +2,22 @@ server:
   port: 8082
 
 spring:
+  application:
+    name: company-service
+
   datasource:
     url: jdbc:postgresql://postgres:5432/mickroservices_db
     username: postgres
     password: cfnhfg
     schema: company_schema
     driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        default_schema: company_schema
 
   flyway:
     enabled: true
@@ -16,5 +26,30 @@ spring:
     baseline-on-migrate: true
     create-schemas: true
 
+  kafka:
+    bootstrap-servers: kafka:9092
+
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+
+    consumer:
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      group-id: company-service
+      properties:
+        spring.json.trusted.packages: "*"
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://discovery-server:8761/eureka/
+
+kafka:
+  topic:
+    company-deleted: company.deleted
+    company-delete-final: company.delete.final
+
 service:
   description: "Сервис для управления компаниями"
+
