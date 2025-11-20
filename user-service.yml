@@ -39,3 +39,7 @@ eureka:
 
 service:
   description: "Сервис для управления пользователями"
+  
+topics:
+  company-deleted: company-deleted-topic
+  company-hard-delete: company-hard-delete-topic
