@@ -1,14 +1,6 @@
 server:
   port: 8082
 
-eureka:
-  instance:
-    hostname: company-service # <--- Здесь должно быть имя сервиса Docker
-    prefer-ip-address: false
-  client:
-    service-url:
-      defaultZone: http://discovery-server:8761/eureka/
-
 spring:
   datasource:
     url: jdbc:postgresql://postgres:5432/mickroservices_db
