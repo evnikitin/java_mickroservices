@@ -2,6 +2,11 @@ server:
   port: 8082
 
 spring:
+  application:
+    name: company-service
+  
+spring:  
+  # Настройки базы данных (оставил без изменений)
   datasource:
     url: jdbc:postgresql://postgres:5432/mickroservices_db
     username: postgres
@@ -15,6 +20,26 @@ spring:
     schemas: company_schema
     baseline-on-migrate: true
     create-schemas: true
+
+  # --- НОВЫЕ НАСТРОЙКИ KAFKA ---
+  kafka:
+    bootstrap-servers: kafka:9092
+    consumer:
+      group-id: company-group
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+
+eureka:
+  instance:
+    hostname: company-service
+    prefer-ip-address: false
+  client:
+    service-url:
+      defaultZone: http://discovery-server:8761/eureka/
 
 service:
   description: "Сервис для управления компаниями"
