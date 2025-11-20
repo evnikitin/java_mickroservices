@@ -1,10 +1,6 @@
 server:
   port: 8082
 
-spring:
-  application:
-    name: company-service
-  
 spring:  
   # Настройки базы данных (оставил без изменений)
   datasource:
