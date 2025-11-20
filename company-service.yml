@@ -42,3 +42,4 @@ service:
 
 topics:
   company-deleted: company-deleted-topic
+  company-hard-delete: company-hard-delete-topic
