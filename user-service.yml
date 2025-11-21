@@ -2,7 +2,6 @@ server:
   port: 8081
 
 spring:
-  # Настройки базы данных (оставил без изменений)
   datasource:
     url: jdbc:postgresql://postgres:5432/mickroservices_db
     username: postgres
@@ -17,7 +16,6 @@ spring:
     baseline-on-migrate: true
     create-schemas: true
 
-  # --- НОВЫЕ НАСТРОЙКИ KAFKA ---
   kafka:
     bootstrap-servers: kafka:9092
     consumer:
